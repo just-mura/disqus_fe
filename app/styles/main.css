@@ -1,16 +1,34 @@
 body, html {
     height: 600px;
-    width: 400px;
+    width: 450px;
     overflow: hidden;
 }
 body {
-  /*padding: 20px;*/
-}
-
+  }
 .panel-body {
     max-height: 300px;
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+
+.panel-footer, .pager{
+  padding-top: 10px;
+    padding-bottom: 5px;
 }
 
 .panel-primary{
     max-height: 600px;
+}
+
+#main_div{
+  margin-top: 10px;
+}
+
+.panel{
+  margin-top: 20px;
+}
+
+#add_comment{
+  cursor: pointer;
+  margin-left: 8px;
 }

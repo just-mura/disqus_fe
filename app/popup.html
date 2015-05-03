@@ -14,20 +14,73 @@
   <!-- endbuild -->
   </head>
   <body>
-
-
+    
   <!-- build:js scripts/vendor.js -->
   <!-- bower:js -->
   <script src="bower_components/jquery/dist/jquery.js"></script>
-  <script src="bower_components/reactive/ractive.js"></script>
+  <script src="bower_components/reactive/Ractive.js"></script>
   <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
   <script src="bower_components/bootstrap-material-design/dist/js/material.js"></script>
   <script src="bower_components/bootstrap-material-design/dist/js/ripples.js"></script>
   <!-- endbower -->
   <!-- endbuild -->
 
+  <!-- div for header -->
+  <div id="result"></div>
+    <div class="col-lg-1"></div>
+    <div class="col-lg-10" id="main_div">
+      <h1 style="margin-left:60px"><strong>SDU Disqus</strong></h1>
+
+
+      <!--div for main body-->
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h3 style="margin-left:50px" class="panel-title">Who are you?</h3>
+        </div>
+        <div class="panel-body">
+          <div class="col-lg-10">
+            <input type="email" class="form-control" id="inputEmail" placeholder="Email" value="{{user_email}}">
+            <input type="text" class="form-control" id="inputName" placeholder="Name" value="{{user_name}}">
+            <button on-click='ok' class="btn btn-primary btn-sm">Submit</button>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h3 style="margin-left:20px" class="panel-title"><strong>{{array_length}} Comments</strong></h3>
+        </div>
+        <div class="panel-body">
+          <div class="col-lg-10">
+            <div class="list-group">
+              <div class="list-group-item">
+                <div class="row-content">
+                  <div class="least-content">{{date}}</div>
+                  <h4 class="list-group-item-heading">{{name}}</h4>
+                  <p style="margin-left:100px" class="list-group-item-text">{{comment}}</p>
+                </div>
+              </div>
+              
+            </div>
+            
+            
+          </div>
+        </div>
+        
+        <!--- add comments-->
+        <div class="panel-footer">
+          <div class="form-group">
+            <div class="input-group">
+              <input type="text" class="form-control" value="{{comment}}" placeholder="Comment">
+              <span class="input-group-btn">
+                <button style="margin-top:1px" on-click='add_comment' class="btn btn-primary btn-sm" id="add_comment">Send</button>
+              </span>
+            </div>
+          </div>
+        </div>
   <!-- build:js scripts/popup.js -->
   <script src="scripts/popup.js"></script>
   <!-- endbuild -->
+  
   </body>
+  
 </html>
